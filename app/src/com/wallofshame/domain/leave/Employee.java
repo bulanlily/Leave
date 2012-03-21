@@ -18,7 +18,7 @@ public class Employee {
     public Employee(DateTime dateOfJob, int id, String name, String office) {
         this.dateOfJob = dateOfJob;
         this.id = id;
-        this.name = name;
+        this.name = name.replace(",","");
         this.office = office;
         this.historyLeaves = new ArrayList<Leave>();
     }
@@ -65,6 +65,10 @@ public class Employee {
     public int getTenner() {
         return Constants.getCurrentYear() - dateOfJob.getYear();
     }
+    
+    public String getPresentTenner(){
+        return (getTenner()>=1)?String.valueOf(getTenner()):(new DateTime().getMonthOfYear() - dateOfJob.getMonthOfYear())+"mon";
+    }
 
     public double getRemainingAnnualLeave() {
         double usedLeave = 0;
@@ -78,12 +82,12 @@ public class Employee {
     }
 
     public double getAnnualLeaveAtPresent(){
-        double availableLeave = (double)getRightActuralRateByYear() / Constants.getDaysOfTheYear() * Constants.getCurrentDayOfYear();
+        double availableLeave = (double) getRightActualRateByYear() / Constants.getDaysOfTheYear() * Constants.getCurrentDayOfYear();
         return  Math.round(availableLeave*10.0)/10.0;
     }
 
 
-    public int getRightActuralRateByYear() {
+    public int getRightActualRateByYear() {
         if (Constants.FIRST_STEP >= this.getTenner()) {
             return Constants.FIRST_ACTUAL_DAYS_BY_YEAR;
         } else if (Constants.SECOND_STEP >= this.getTenner()) {
@@ -97,7 +101,7 @@ public class Employee {
     }
 
     public double getRightActualRateByMonth() {
-        return getRightActuralRateByYear() / (double) Constants.MONTH_A_YEAR;
+        return getRightActualRateByYear() / (double) Constants.MONTH_A_YEAR;
     }
 
     public int addHistoryLeavesSize(Leave leave) {

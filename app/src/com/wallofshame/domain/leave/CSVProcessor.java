@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class CSVProcessor {
-    private static final String BASIC_FOLDER_NAME = "app/excels";
+    private static final String BASIC_FOLDER_NAME = System.getenv("EXCELS_PATH");
     private File fileFolder;
 
     public String listAllFilesInBasicFolder(){
@@ -21,6 +21,9 @@ public class CSVProcessor {
             listString+="\n";
         }
         return listString;
+    }
+    public String getFileForderName(){
+        return fileFolder.getName();
     }
 
     //get the lastest file folder
@@ -38,6 +41,7 @@ public class CSVProcessor {
             }
         }
         fileFolder = latestFileFolder;
+
     }
 
     //get the folder user asked
@@ -98,6 +102,8 @@ public class CSVProcessor {
         }
         return true;
     }
+
+
 
     //get the date by folder name
     private DateTime getDateByYearAndMonthString(String timeString) {

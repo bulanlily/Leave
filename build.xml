@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project name="cruise" basedir="." default="pkg">
-    <property name="scala.home" value="/Users/twer/sdk/scala-2.8.1.final"/>
-    <property name="scala-compiler.jar" value="${scala.home}/lib/scala-compiler.jar"/>
-    <property name="scala-library.jar" value="${scala.home}/lib/scala-library.jar"/>
+<project name="wallofshame" basedir="." default="pkg">
+
     <property name="test.dir" value="app/test"></property>
     <property name="src.dir" value="app/src"></property>
     <property name="server.src.dir" value="server/src"></property>
@@ -14,15 +12,8 @@
     <property name="compiled.test.dir" value="${target.dir}/test/classes"></property>
 
 
-    <taskdef resource="scala/tools/ant/antlib.xml">
-        <classpath refid="scala.classpath"/>
-    </taskdef>
 
-    <!--define all the path-->
-    <path id="scala.classpath">
-        <pathelement location="${scala-compiler.jar}"/>
-        <pathelement location="${scala-library.jar}"/>
-    </path>
+
 
     <path id="source.lib.classpath">
         <fileset dir="app/webapp/WEB-INF/lib">
@@ -31,7 +22,6 @@
     </path>
 
     <path id="compile.source.classpath">
-        <path refid="scala.classpath"></path>
         <path refid="source.lib.classpath"></path>
     </path>
 
@@ -66,12 +56,8 @@
         <mkdir dir="${dist.dir}/expanded"/>
     </target>
 
+
     <target name="compile.src" depends="prepare">
-        <scalac srcdir="${src.dir}" destdir="${compiled.src.dir}"
-                classpathref="compile.source.classpath">
-            <include name="**/*.scala"/>
-            <exclude name="**/*.java"/>
-        </scalac>
         <javac srcdir="${src.dir}" destdir="${compiled.src.dir}" classpathref="compile.source.classpath">
             <include name="**/*.java"/>
         </javac>
@@ -95,23 +81,20 @@
     </target>
 
     <target name="compile.test" depends="prepare,jar.source">
-        <scalac srcdir="${test.dir}" destdir="${compiled.test.dir}" classpathref="compile.test.classpath">
-            <include name="**/*.scala"/>
-            <exclude name="**/*.java"/>
-        </scalac>
         <javac srcdir="${test.dir}" destdir="${compiled.test.dir}" classpathref="compile.test.classpath">
             <include name="**/*.java"/>
         </javac>
     </target>
 
+
     <target name="run.test" depends="compile.test" description="execute the tests">
-        <taskdef name="scalatest" classname="org.scalatest.tools.ScalaTestAntTask">
-            <classpath refid="run.test.classpath"/>
-        </taskdef>
-        <scalatest runpath="${compiled.test.dir}"
-                   haltonfailure="true" fork="false">
-            <reporter type="stdout"/>
-        </scalatest>
+        <junit>
+            <classpath refid="run.test.classpath" />
+            <batchtest>
+                <fileset dir="${compiled.test.dir}"/>
+            </batchtest>
+            <formatter type="plain" usefile="false" />
+        </junit>
     </target>
 
     <target name="jar.source" depends="compile.src">

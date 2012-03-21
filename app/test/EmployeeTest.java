@@ -42,7 +42,7 @@ public class EmployeeTest {
 
     @Test
     public void shouldGetRightActualRateByYear() {
-        assertEquals(25, employee1.getRightActuralRateByYear());
+        assertEquals(25, employee1.getRightActualRateByYear());
     }
 
     @Test
