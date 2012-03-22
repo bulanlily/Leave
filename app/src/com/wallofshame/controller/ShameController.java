@@ -34,10 +34,10 @@ public class ShameController {
     }
 
 
-    @RequestMapping(value = "/login.html", method = RequestMethod.GET)
-    public String login() {
-        return "login";
-    }
+//    @RequestMapping(value = "/login.html", method = RequestMethod.GET)
+//    public String login() {
+//        return "login";
+//    }
 
     @RequestMapping(value = "/history/{userId}", method = RequestMethod.GET)
     public String history(Model model,

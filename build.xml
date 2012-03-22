@@ -115,6 +115,20 @@
              excludes="**/lib/servlet-api-2.5-20081211.jar" />
     </target>
 
+   <target name="deploy" depends="pkg.tomcat.war">
+       <sshexec host="10.18.8.76"
+                username="Administrator"
+                password="TWr0ys1ngh4m"
+                command="rm -f /cygdrive/c/Program\ Files/apache-tomcat-6.0.35/webapps/leaveSheet.war"/>
+       <scp file="dist/tomcat/leaveSheet.war"
+            todir="Administrator@10.18.8.76:/cygdrive/c/Program\ Files/apache-tomcat-6.0.35/leaveSheet.war"
+            password="TWr0ys1ngh4m"/>
+       <sshexec host="10.18.8.76"
+                username="Administrator"
+                password="TWr0ys1ngh4m"
+                command="cp /cygdrive/c/Program\ Files/apache-tomcat-6.0.35/leaveSheet.war /cygdrive/c/Program\ Files/apache-tomcat-6.0.35/webapps/leaveSheet.war"/>
+   </target>
+
 
     <target name="clean.dist">
         <delete dir="${dist.dir}" />
