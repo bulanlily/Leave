@@ -4,8 +4,8 @@
 <head>
 
     <title>Leave Information</title>
-    <script type="text/javascript" src="/wallofshame/assets/js/jquery.js"></script>
-    <script type="text/javascript" src="/wallofshame/assets/js/jquery.txt"></script>
+    <script type="text/javascript" src="${requestContext.contextPath}/assets/js/jquery.js"></script>
+    <script type="text/javascript" src="${requestContext.contextPath}/assets/js/jquery.txt"></script>
     <!-- Le styles -->
 
     <script type="text/javascript">
@@ -17,13 +17,13 @@
         });
     </script>
 
-    <link href="/wallofshame/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="${requestContext.contextPath}/assets/css/bootstrap.css" rel="stylesheet">
     <style type="text/css">
         body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
         }
     </style>
-    <link href="/wallofshame/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="${requestContext.contextPath}/assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -31,13 +31,13 @@
     <![endif]-->
 
     <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="/wallofshame/assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="${requestContext.contextPath}/assets/ico/favicon.ico">
 
     <link rel="apple-touch-icon-precomposed" sizes="114x114"
-          href="/wallofshame/assets/ico/apple-touch-icon-114-precomposed.png">
+          href="${requestContext.contextPath}/assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
-          href="/wallofshame/assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/wallofshame/assets/ico/apple-touch-icon-57-precomposed.png">
+          href="${requestContext.contextPath}/assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="${requestContext.contextPath}/assets/ico/apple-touch-icon-57-precomposed.png">
 </head>
 
 

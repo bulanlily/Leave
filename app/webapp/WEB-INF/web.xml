@@ -22,73 +22,21 @@
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
     </listener>
-    
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
 
     <servlet>
-        <servlet-name>spring-wallofshame</servlet-name>
+        <servlet-name>spring-leaveSheet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <servlet>
-        <servlet-name>default</servlet-name>
-        <servlet-class>org.mortbay.jetty.servlet.DefaultServlet</servlet-class>
-        <init-param>
-            <param-name>cacheControl</param-name>
-            <param-value>max-age=36000,public</param-value>
-        </init-param>
-        <init-param>
-            <param-name>acceptRanges</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>dirAllowed</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <init-param>
-            <param-name>redirectWelcome</param-name>
-            <param-value>false</param-value>
-        </init-param>
-        <init-param>
-            <param-name>maxCacheSize</param-name>
-            <param-value>30000</param-value>
-        </init-param>
-        <init-param>
-            <param-name>maxCachedFileSize</param-name>
-            <param-value>254000</param-value>
-        </init-param>
-        <init-param>
-            <param-name>maxCachedFiles</param-name>
-            <param-value>1000</param-value>
-        </init-param>
-        <init-param>
-            <param-name>useFileMappedBuffer</param-name>
-            <param-value>true</param-value>
-        </init-param>
-        <load-on-startup>0</load-on-startup>
-    </servlet>
 
     <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>/css/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>/assets/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>/javascripts/*</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>spring-wallofshame</servlet-name>
+        <servlet-name>spring-leaveSheet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
 
