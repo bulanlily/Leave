@@ -23,7 +23,7 @@ public class DashBoardProcessor {
         CSVReader reader;
         for (File file : files) {
             reader = new CSVReader(new FileReader(file));
-            String[] lineInfo;
+            String[] lineInfo= reader.readNext();
             while ((lineInfo = reader.readNext()) != null) {
                 if (lineInfo[2].equals("REA0001")&&(!lineInfo[6].equals("0.00"))) {
                     returnList.add(lineInfo);
