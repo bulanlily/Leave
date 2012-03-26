@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list id="73896100-3ae4-4714-af34-5771e72683cb" name="Default" comment="user console appender in development environment for easy debugging." />
     <list default="true" id="b2e3814b-878a-4349-a7e6-865df02ef092" name="New changelist" comment="before deploy&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/test/CSVProcessorTest.java" afterPath="$PROJECT_DIR$/app/test/testLeaveSheet/CSVProcessorTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/test/EmployeeTest.java" afterPath="$PROJECT_DIR$/app/test/testLeaveSheet/EmployeeTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/test/IntegrationTest.java" afterPath="$PROJECT_DIR$/app/test/testLeaveSheet/IntegrationTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/test/LeaveTest.java" afterPath="$PROJECT_DIR$/app/test/testLeaveSheet/LeaveTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/test/TimeSheetTest.java" afterPath="$PROJECT_DIR$/app/test/testLeaveSheet/TimeSheetTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webapp/WEB-INF/classes/com/wallofshame/controller/ShameController.class" afterPath="$PROJECT_DIR$/app/webapp/WEB-INF/classes/com/wallofshame/controller/ShameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webapp/WEB-INF/classes/com/wallofshame/domain/leave/CSVProcessor.class" afterPath="$PROJECT_DIR$/app/webapp/WEB-INF/classes/com/wallofshame/domain/leave/CSVProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WallOfShame.iws" afterPath="$PROJECT_DIR$/WallOfShame.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/wallofshame/controller/ShameController.java" afterPath="$PROJECT_DIR$/app/src/com/wallofshame/controller/ShameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/com/wallofshame/domain/leave/CSVProcessor.java" afterPath="$PROJECT_DIR$/app/src/com/wallofshame/domain/leave/CSVProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/history.ftl" afterPath="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/history.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/index.ftl" afterPath="$PROJECT_DIR$/app/webapp/WEB-INF/ftls/index.ftl" />
     </list>
     <ignored path="WallOfShame.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1011,16 +999,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2241594" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49251497" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27116212" sideWeight="0.5838323" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27116212" sideWeight="0.5838323" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34620175" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49251497" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
