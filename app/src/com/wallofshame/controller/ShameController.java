@@ -1,6 +1,10 @@
 package com.wallofshame.controller;
 
 
+import com.wallofshame.domain.dashBoard.Board;
+import com.wallofshame.domain.dashBoard.DashBoardProcessor;
+import com.wallofshame.domain.dashBoard.Project;
+import com.wallofshame.domain.dashBoard.REAContants;
 import com.wallofshame.domain.leave.CSVProcessor;
 import com.wallofshame.domain.leave.Employee;
 import com.wallofshame.domain.leave.TimeSheet;
@@ -20,6 +24,9 @@ public class ShameController {
 
     private TimeSheet timeSheet = new TimeSheet();
     private CSVProcessor csvProcessor = new CSVProcessor();
+    private Board board = new Board();
+    private DashBoardProcessor boardProcessor = new DashBoardProcessor();
+
 
     @RequestMapping(value = "/index.html", method = RequestMethod.GET)
     public String index(Model model) throws IOException {
@@ -29,10 +36,18 @@ public class ShameController {
         timeSheet.addAllLeaveToListByStrings(csvProcessor.getTakeOffInfo());
         Object[] employees = timeSheet.getEmployeeHashMap().values().toArray();
         model.addAttribute("employees", employees);
-        model.addAttribute("time",csvProcessor.getFileForderName());
+        model.addAttribute("time", csvProcessor.getFileForderName());
         return "index";
     }
 
+    @RequestMapping(value = "/board.html", method = RequestMethod.GET)
+    public String board(Model model) throws IOException {
+        board.clear();
+        board.addAllInfomationToMapByStrings(boardProcessor.getDashBoardList());
+        Object[] projects = board.getProjectHashMap().values().toArray();
+        model.addAttribute("projects", projects);
+        return "board";
+    }
 
 //    @RequestMapping(value = "/login.html", method = RequestMethod.GET)
 //    public String login() {
@@ -45,8 +60,20 @@ public class ShameController {
                           HttpServletResponse resp) throws IOException {
         Employee employee = timeSheet.findEmployeeById(Integer.parseInt(userId));
         model.addAttribute("employee", employee);
-        model.addAttribute("leaves",employee.getHistoryLeaves());
+        model.addAttribute("leaves", employee.getHistoryLeaves());
         return "history";
+
+    }
+
+    @RequestMapping(value = "/book/{proName}", method = RequestMethod.GET)
+    public String book(Model model,
+                          @PathVariable("proName") String proName,
+                          HttpServletResponse resp) throws IOException {
+        Project project = board.getProjectByName(proName);
+        Object[] peopleList = project.getPeopleMap().values().toArray();
+        model.addAttribute("proName",proName);
+        model.addAttribute("peopleList", peopleList);
+        return "book";
 
     }
 //

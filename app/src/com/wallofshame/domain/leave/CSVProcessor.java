@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class CSVProcessor {
-    private static final String BASIC_FOLDER_NAME = System.getenv("EXCELS_PATH");
+    private static final String BASIC_FOLDER_NAME = "app/excels";
     private File fileFolder;
 
     public String listAllFilesInBasicFolder(){
